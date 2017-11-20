@@ -1,0 +1,19 @@
+{
+    "name": "xing.chen/erp",
+    "description": "erp 服务插件 目前支持通途",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "chen xing",
+            "email": "877349686@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "xing\\erp\\": ""
+        }
+    }
+}

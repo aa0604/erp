@@ -41,7 +41,7 @@ class ERPTongTuService extends \xing\erp\core\ERPBaseService implements \xing\er
         $method = 'store/test?test=1';
         er($this->query($method, ['orderId' => $orderSn]));*/
         $method = 'process/resume/openapi/tongtool/ordersQuery';
-        $result = $this->query($method, ['orderId' => $orderSn]);
+        $result = $this->query($method, ['orderId' => $this->config['prefixOrderSn'] . $orderSn]);
         return $result;
     }
 

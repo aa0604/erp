@@ -19,4 +19,5 @@ interface ERPInterface
     public function getOrderStatus($orderSn);
 
     public function addOrder($params);
+    public function getOrderExpres($orderSn);
 }

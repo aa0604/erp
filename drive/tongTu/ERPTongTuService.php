@@ -69,6 +69,18 @@ class ERPTongTuService extends \xing\erp\core\ERPBaseService implements \xing\er
     }
 
     /**
+     * 查询一个物流信息
+     * @param $orderSn
+     * @return array
+     */
+    public function getOrderExpres($orderSn)
+    {
+        $method = 'process/resume/openapi/tongtool/trackingNumberQuery';
+        $result = $this->query($method, ['orderIds' => [$this->config['prefixOrderSn'] . $orderSn]]);
+        return $result['data']['array'][0] ?? [];
+    }
+
+    /**
      * @param $method
      * @param array $params
      * @return array
